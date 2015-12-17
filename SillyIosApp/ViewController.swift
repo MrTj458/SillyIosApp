@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    var sliderRed :CGFloat = 0
-    var sliderBlue :CGFloat = 0
-    var sliderGreen :CGFloat = 0
+    var sliderRed :CGFloat
+    var sliderBlue :CGFloat
+    var sliderGreen :CGFloat
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        sliderRed = 0.0
+        sliderGreen = 0.0
+        sliderBlue = 0.0
+        super.init(coder: aDecoder)
+       
+    }
+
     
     override func viewDidLoad()
     {

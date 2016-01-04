@@ -16,9 +16,9 @@ class ViewController: UIViewController
     
     required init?(coder aDecoder: NSCoder)
     {
-        sliderRed = 0.0
-        sliderGreen = 0.0
-        sliderBlue = 0.0
+        sliderRed = 1.0
+        sliderGreen = 1.0
+        sliderBlue = 1.0
         super.init(coder: aDecoder)
        
     }

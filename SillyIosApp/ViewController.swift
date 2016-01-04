@@ -91,6 +91,9 @@ class ViewController: UIViewController
             redSlider.value = Float(newRed * 100)
             greenSlider.value = Float(newGreen * 100)
             blueSlider.value = Float(newBlue * 100)
+            sliderRed = newRed
+            sliderGreen = newGreen
+            sliderBlue = newBlue
         }
         else if(color == "white")
         {

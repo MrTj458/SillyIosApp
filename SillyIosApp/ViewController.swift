@@ -14,11 +14,15 @@ class ViewController: UIViewController
     var sliderBlue :CGFloat
     var sliderGreen :CGFloat
     
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+    
     required init?(coder aDecoder: NSCoder)
     {
-        sliderRed = 1.0
-        sliderGreen = 1.0
-        sliderBlue = 1.0
+        sliderRed = 100.0
+        sliderGreen = 100.0
+        sliderBlue = 100.0
         super.init(coder: aDecoder)
        
     }
@@ -37,30 +41,36 @@ class ViewController: UIViewController
     
     @IBAction func redSlider(sender: UISlider)
     {
-        self.sliderRed = CGFloat(Double(sender.value))
+        self.sliderRed = CGFloat(Double(sender.value) / 100)
         changeColor("slider")
     }
     
     @IBAction func greenSlider(sender: UISlider)
     {
-        self.sliderGreen = CGFloat(Double(sender.value))
+        self.sliderGreen = CGFloat(Double(sender.value) / 100)
         changeColor("slider")
     }
     
     @IBAction func blueSlider(sender: UISlider)
     {
-        self.sliderBlue = CGFloat(Double(sender.value))
+        self.sliderBlue = CGFloat(Double(sender.value) / 100)
         changeColor("slider")
     }
     
     @IBAction func blackBackgroundSelected(sender: UIButton)
     {
         changeColor("black")
+        redSlider.value = 0
+        greenSlider.value = 0
+        blueSlider.value = 0
     }
 
     @IBAction func whiteBackgroundSelected(sender: UIButton)
     {
         changeColor("white")
+        redSlider.value = 100
+        greenSlider.value = 100
+        blueSlider.value = 100
     }
     
     @IBAction func randomColorBackgrouSelected(sender: UIButton)
@@ -77,6 +87,10 @@ class ViewController: UIViewController
             let newBlue = CGFloat(Double(arc4random_uniform(256)) / 55.000)
             
             view.backgroundColor = UIColor(red: newRed, green: newGreen, blue: newBlue, alpha: 1)
+            
+            redSlider.value = Float(newRed * 100)
+            greenSlider.value = Float(newGreen * 100)
+            blueSlider.value = Float(newBlue * 100)
         }
         else if(color == "white")
         {

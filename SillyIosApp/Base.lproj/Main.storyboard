@@ -38,19 +38,19 @@
                                     <action selector="randomColorBackgrouSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0X-aE-ITD"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-K7-Qbt">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-K7-Qbt">
                                 <rect key="frame" x="24" y="104" width="118" height="31"/>
                                 <connections>
                                     <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="78b-D5-XCG"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-lq-C2L">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-lq-C2L">
                                 <rect key="frame" x="148" y="185" width="118" height="31"/>
                                 <connections>
                                     <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="0M1-dN-SUp"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fpX-Zm-AFz">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fpX-Zm-AFz">
                                 <rect key="frame" x="278" y="104" width="118" height="31"/>
                                 <connections>
                                     <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="4pP-oK-DkC"/>
@@ -78,6 +78,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="fpX-Zm-AFz" id="IYR-kp-wAc"/>
+                        <outlet property="greenSlider" destination="B2t-lq-C2L" id="V35-08-PDl"/>
+                        <outlet property="redSlider" destination="LGH-K7-Qbt" id="ALK-Qh-rKY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
